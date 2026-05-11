@@ -1,7 +1,7 @@
 
 
 
-# template_ngxBuilderIonic
+# sampleRBAC
 
 Convertigo NGX builder Project
 
@@ -12,6 +12,10 @@ For more technical informations : [documentation](./project.md)
 - [Mobile Application](#mobile-application)
     - [Pages](#pages)
         - [Page](#page)
+    - [Shared Actions](#shared-actions)
+        - [GetPermissions](#getpermissions)
+    - [Shared Components](#shared-components)
+        - [CardItem](#carditem)
 
 
 ## Installation
@@ -27,17 +31,17 @@ For more technical informations : [documentation](./project.md)
      <tr><td>To contribute</td><td>
 
      ```
-     template_ngxBuilderIonic=git@github.com:convertigo/c8oprj-template-ngx-builder.git:branch=8.4.0
+     sampleRBAC=D:/Dev/eclipse-jee-2025-09/cems-hotfix/runtime-Cems_hotfix/sampleRBAC/.git:branch=master
      ```
      </td></tr>
      <tr><td>To simply use</td><td>
 
      ```
-     template_ngxBuilderIonic=git@github.com:convertigo/c8oprj-template-ngx-builder/archive/8.4.0.zip
+     sampleRBAC=D:/Dev/eclipse-jee-2025-09/cems-hotfix/runtime-Cems_hotfix/sampleRBAC//archive/master.zip
      ```
      </td></tr>
     </table>
-3. Click the `Finish` button. This will automatically import the __template_ngxBuilderIonic__ project
+3. Click the `Finish` button. This will automatically import the __sampleRBAC__ project
 
 
 ## Mobile Application
@@ -49,6 +53,36 @@ Describes the mobile application global properties
 #### Page
 
 Default home page
+
+### Shared Actions
+
+#### GetPermissions
+
+### Shared Components
+
+#### CardItem
+
+**variables**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>item</td><td></td>
+</tr>
+</table>
+
+**events**
+
+<table>
+<tr>
+<th>name</th><th>comment</th>
+</tr>
+<tr>
+<td>onDelete</td><td></td>
+</tr>
+</table>
 
 
 

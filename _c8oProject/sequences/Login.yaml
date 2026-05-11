@@ -1,0 +1,15 @@
+accessibility: Private
+↓inputVars [steps.InputVariablesStep-1778162303387]: 
+↓authenticatedUserID [steps.SetAuthenticatedUserStep-1778162303390]: 
+  output: true
+  userid: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: SOURCE
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1778162303387
+          - java.lang.String: 
+            - ↑value: ./user/text()
+↓user [variables.RequestableVariable-1778162303393]: 

@@ -1,7 +1,16 @@
 
-# ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/core/images/project_color_16x16.png?raw=true "Project") template_ngxBuilderIonic
+# ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/core/images/project_color_16x16.png?raw=true "Project") sampleRBAC
 
 Convertigo NGX builder Project
+
+<details><summary><span style="color:DarkGoldenRod"><i>References</i></span></summary><blockquote><p>
+
+
+## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/references/images/ProjectSchemaReference_16x16.png?raw=true "ProjectSchemaReference") lib_FullSyncGrp
+
+
+see [readme](https://github.com/convertigo/c8oprj-lib-fullsync-grp/tree/RBAC#readme)
+</p></blockquote></details>
 
 <details><summary><span style="color:DarkGoldenRod"><i>Connectors</i></span></summary><blockquote><p>
 
@@ -19,6 +28,102 @@ Placeholder transaction that intentionally cancels execution
 </p></blockquote></details>
 </p></blockquote></details>
 
+<details><summary><span style="color:DarkGoldenRod"><i>Sequences</i></span></summary><blockquote><p>
+
+
+<details><summary><b>DeleteData</b></summary><blockquote><p>
+
+
+## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") DeleteData
+
+
+
+<span style="color:DarkGoldenRod">Variables</span>
+
+<table>
+<tr>
+<th>
+name
+</th>
+<th>
+comment
+</th>
+</tr>
+<tr>
+<td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/variables/images/variable_color_16x16.png?raw=true "  alt="RequestableVariable" >&nbsp;uid
+</td>
+<td>
+
+</td>
+</tr>
+</table>
+
+</p></blockquote></details>
+
+<details><summary><b>GetData</b></summary><blockquote><p>
+
+
+## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") GetData
+
+
+</p></blockquote></details>
+
+<details><summary><b>GetPermissions</b></summary><blockquote><p>
+
+
+## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") GetPermissions
+
+
+</p></blockquote></details>
+
+<details><summary><b>InitAddRolesAndPermissions</b> : Initialisation user/group, group/role, role/permission</summary><blockquote><p>
+
+
+## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") InitAddRolesAndPermissions
+
+Initialisation user/group, group/role, role/permission
+</p></blockquote></details>
+
+<details><summary><b>InitLoadRolesAndPermissions</b> : Definition des user/group, group/role, role/permission</summary><blockquote><p>
+
+
+## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") InitLoadRolesAndPermissions
+
+Definition des user/group, group/role, role/permission
+</p></blockquote></details>
+
+<details><summary><b>Login</b></summary><blockquote><p>
+
+
+## ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/sequences/images/genericsequence_color_16x16.png?raw=true "GenericSequence") Login
+
+
+
+<span style="color:DarkGoldenRod">Variables</span>
+
+<table>
+<tr>
+<th>
+name
+</th>
+<th>
+comment
+</th>
+</tr>
+<tr>
+<td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/variables/images/variable_color_16x16.png?raw=true "  alt="RequestableVariable" >&nbsp;user
+</td>
+<td>
+
+</td>
+</tr>
+</table>
+
+</p></blockquote></details>
+</p></blockquote></details>
+
 <details><summary><span style="color:DarkGoldenRod"><i>Mobile Application</i></span></summary><blockquote><p>
 
 
@@ -32,5 +137,65 @@ Describes the mobile application global properties
 ### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/pagecomponent_color_16x16.png?raw=true "PageComponent") Page
 
 Default home page
+</p></blockquote></details>
+
+<details><summary><span style="color:DarkGoldenRod"><i>Shared Actions</i></span></summary><blockquote><p>
+
+
+### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uiactionstack_color_16x16.png?raw=true "UIActionStack") GetPermissions
+
+
+</p></blockquote></details>
+
+<details><summary><span style="color:DarkGoldenRod"><i>Shared Components</i></span></summary><blockquote><p>
+
+
+### ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uisharedcomponent_16x16.png?raw=true "UISharedRegularComponent") CardItem
+
+
+
+<span style="color:DarkGoldenRod">Variables</span>
+
+<table>
+<tr>
+<th>
+name
+</th>
+<th>
+comment
+</th>
+</tr>
+<tr>
+<td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uicompvariable_16x16.png?raw=true "  alt="UICompVariable" >&nbsp;item
+</td>
+<td>
+
+</td>
+</tr>
+</table>
+
+
+<span style="color:DarkGoldenRod">Events</span>
+
+<table>
+<tr>
+<th>
+name
+</th>
+<th>
+comment
+</th>
+</tr>
+<tr>
+<td>
+<img src="https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/ngx/components/images/uicompevent_16x16.png?raw=true "  alt="UICompEvent" >&nbsp;onDelete
+</td>
+<td>
+
+</td>
+</tr>
+</table>
+
 </p></blockquote></details>
 </p></blockquote></details>

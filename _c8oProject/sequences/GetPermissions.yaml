@@ -1,0 +1,33 @@
+accessibility: Private
+↓Call_Sequence [steps.SequenceStep-1778162680933]: 
+  sourceSequence: lib_FullSyncGrp.EffectivePermissionsOfUser
+↓IfExist [steps.IfExistThenElseStep-1778165730165]: 
+  condition: IfExist
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1778162680933
+        - java.lang.String: 
+          - ↑value: ./document/error
+  ↓jThen [steps.ThenStep-1778165730167]: 
+    ↓Copy [steps.XMLCopyStep-1778165745711]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1778162680933
+            - java.lang.String: 
+              - ↑value: ./document/error
+  ↓jElse [steps.ElseStep-1778165730169]: 
+    ↓Copy [steps.XMLCopyStep-1778165764354]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1778162680933
+            - java.lang.String: 
+              - ↑value: ./document/permission

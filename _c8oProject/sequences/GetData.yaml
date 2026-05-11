@@ -1,0 +1,174 @@
+accessibility: Private
+↓defineData [steps.SimpleStep-1778165097984]: 
+  expression: |
+    'var data = [
+    	{
+    		"uid": "admin1",
+    		"type": "power admin",
+    		"firstname": "Alain",
+    		"lastname": "Dupont"
+    	},
+    	{
+    		"uid": "admin2",
+    		"type": "restricted admin",
+    		"firstname": "Paul",
+    		"lastname": "Durand"
+    	},
+    	{
+    		"uid": "user1",
+    		"type": "standart user",
+    		"firstname": "Annie",
+    		"lastname": "Leroux"
+    	},
+    	{
+    		"uid": "user2",
+    		"type": "standart user",
+    		"firstname": "Laurent",
+    		"lastname": "Machin"
+    	},
+    	{
+    		"uid": "guest1",
+    		"type": "guest user",
+    		"firstname": "Jacques",
+    		"lastname": "Gobio"
+    	},
+    	{
+    		"uid": "guest2",
+    		"type": "guest user",
+    		"firstname": "Catherine",
+    		"lastname": "Rivieccio"
+    	}
+    ];'
+↓Call_Sequence [steps.SequenceStep-1778170248836]: 
+  sourceSequence: lib_FullSyncGrp.EffectivePermissionsOfUser
+↓IfExist1 [steps.IfExistStep-1778490051970]: 
+  condition: IfExist
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1778170248836
+        - java.lang.String: 
+          - ↑value: ./document/permission
+  ↓authenticatedUserID [steps.GetAuthenticatedUserStep-1778171070775]: 
+    output: false
+  ↓myVariable [steps.SimpleSourceStep-1778171316780]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1778171070775
+          - java.lang.String: 
+            - ↑value: ./text()
+    variableName: authenticatedUID
+  ↓userPermissions [steps.SourceStep-1778170472548]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1778170248836
+          - java.lang.String: 
+            - ↑value: ./document/permission/text()
+    variableName: userPermissions
+  ↓filterData [steps.SimpleStep-1778170634422]: 
+    expression: |
+      'var permissions = [];
+      //log.warn("###### userPermissions.getLength(): "+ userPermissions.getLength());
+      for (var i=0; i<userPermissions.getLength(); i++) {
+      	var permission = "" + userPermissions.item(i).getTextContent();
+      	//log.warn("###### permission: "+ permission);
+      	permissions.push(permission);
+      }
+      
+      var fileredData = [];
+      if (permissions.includes("samplerbac.data.read:all")) {
+      	fileredData = data;
+      } else if (permissions.includes("samplerbac.data.read:own")) {
+      	fileredData = data.filter(ob => (ob.uid == authenticatedUID));
+      }'
+  ↓jIterator [steps.SimpleIteratorStep-1778169536314]: 
+    expression: fileredData
+    ↓object [steps.JsonObjectStep-1778169801960]: 
+      ↓uid [steps.JsonFieldStep-1778169808763]: 
+        key: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: PLAIN
+              - →→: uid
+        value: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: JS
+              - →→: item.uid
+      ↓type [steps.JsonFieldStep-1778169824813]: 
+        key: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: PLAIN
+              - →→: type
+        value: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: JS
+              - →→: item.type
+      ↓firstname [steps.JsonFieldStep-1778169831245]: 
+        key: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: PLAIN
+              - →→: firstname
+        value: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: JS
+              - →→: item.firstname
+      ↓lastname [steps.JsonFieldStep-1778169878401]: 
+        key: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: PLAIN
+              - →→: lastname
+        value: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: JS
+              - →→: item.lastname
+  ↓Return [steps.ReturnStep-1778490131636]: 
+↓IfExist2 [steps.IfExistStep-1778490103782]: 
+  condition: IfExist2
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1778170248836
+        - java.lang.String: 
+          - ↑value: ./document/error
+  ↓Copy [steps.XMLCopyStep-1778170248845]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1778170248836
+          - java.lang.String: 
+            - ↑value: ./document/error
+  ↓Return [steps.ReturnStep-1778490123171]: 
+↓Error_structure [steps.XMLErrorStep-1778490219321]: 
+  message: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: PLAIN
+        - →→: Database not initialized

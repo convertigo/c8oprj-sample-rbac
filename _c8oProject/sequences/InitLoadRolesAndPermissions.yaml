@@ -1,0 +1,71 @@
+accessibility: Private
+comment: Definition des user/group, group/role, role/permission
+↓DefineUGRP [steps.SimpleStep-1777969992985]: 
+  expression: |
+    'var userGroups = [
+    	["admin1", "full_admins"],
+    	["admin2", "restricted_admins"],
+    	["user1", "users"],
+    	["user2", "users"],
+    	["guest1", "guests"],
+    	["guest2", "guests"],
+    ];
+    
+    var groupRoles = [
+    	["guests", "guest_viewer"],
+    	["users", "user_editor"],
+    	["full_admins", "data_admin"],
+    	["restricted_admins", "data_editor"]	
+    ];
+    
+    var rolePermissions = [
+    	["guest_viewer", "samplerbac.data", "read", "own"],
+    	["user_editor", "samplerbac.data", "read", "own"],
+    	["user_editor", "samplerbac.data", "write", "own"],
+    	["data_editor", "samplerbac.data", "read", "all"],
+    	["data_editor", "samplerbac.data", "write", "all"],
+    	["data_admin", "samplerbac.data", "read", "all"],
+    	["data_admin", "samplerbac.data", "write", "all"],
+    	["data_admin", "samplerbac.data", "delete", "all"]
+    ];
+    '
+↓jIterator [steps.SimpleIteratorStep-1777970019754]: 
+  expression: userGroups
+  ↓element [steps.XMLElementStep-1777970681659]: 
+    nodeName: userInGroup
+    ↓attribute2 [steps.AttributeStep-1777970574679]: 
+      expression: item[0]
+      nodeName: user
+    ↓attribute [steps.AttributeStep-1777970596081]: 
+      expression: item[1]
+      nodeName: group
+↓jIterator1 [steps.SimpleIteratorStep-1777983753865]: 
+  expression: groupRoles
+  ↓element [steps.XMLElementStep-1777983753868]: 
+    nodeName: roleInGroup
+    ↓attribute2 [steps.AttributeStep-1777983753871]: 
+      expression: item[0]
+      nodeName: group
+    ↓attribute [steps.AttributeStep-1777983753874]: 
+      expression: item[1]
+      nodeName: role
+↓jIterator2 [steps.SimpleIteratorStep-1777984426295]: 
+  expression: rolePermissions
+  ↓element [steps.XMLElementStep-1777984426298]: 
+    nodeName: permissionInRole
+    ↓attribute2 [steps.AttributeStep-1777984426301]: 
+      expression: item[0]
+      nodeName: role
+    ↓attribute [steps.AttributeStep-1777984426304]: 
+      expression: item[1]
+      nodeName: element
+    ↓attribute1 [steps.AttributeStep-1777984737502]: 
+      expression: item[2]
+      nodeName: action
+    ↓attribute3 [steps.AttributeStep-1777984768125]: 
+      expression: item[3]
+      nodeName: scope
+    ↓attribute4 [steps.AttributeStep-1777984934882]: 
+      expression: item[1] + '.' + item[2] + ':' + item[3]
+      isEnabled: false
+      nodeName: permission

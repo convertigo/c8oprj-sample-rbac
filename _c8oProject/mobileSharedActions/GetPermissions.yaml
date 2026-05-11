@@ -1,0 +1,18 @@
+↓CallSequence1 [ngx.components.UIDynamicAction-1778487786865]: 
+  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:sampleRBAC.GetPermissions"}'
+  ↓permissionsToArray [ngx.components.UICustomAction-1778487725359]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		let isArray = Array.isArray(vars.permission);
+            		let permissions = isArray ? vars.permission : (vars.permission ? new Array(vars.permission) : new Array());
+            		console.log("permissions", permissions);
+            		resolve(permissions);
+            '
+    ↓permission [ngx.components.UIControlVariable-1778487725362]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Action","project":"sampleRBAC","input":"","model":{"data":[{"priority":1778487786865,"rootEvent":false,"pageLocals":false},{"priority":1778487704301,"rootEvent":false,"pageLocals":false}],"path":"?.out?.permission","prefix":"","suffix":"","custom":"","useCustom":false}}

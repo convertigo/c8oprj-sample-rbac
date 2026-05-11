@@ -1,0 +1,84 @@
+accessibility: Private
+↓Call_Sequence [steps.SequenceStep-1778494038302]: 
+  sourceSequence: lib_FullSyncGrp.EffectivePermissionsOfUser
+↓IfExist1 [steps.IfExistStep-1778494100218]: 
+  condition: IfExist1
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1778494038302
+        - java.lang.String: 
+          - ↑value: ./document/permission
+  ↓authenticatedUserID [steps.GetAuthenticatedUserStep-1778494488679]: 
+    output: false
+  ↓myVariable [steps.SimpleSourceStep-1778494488682]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1778494488679
+          - java.lang.String: 
+            - ↑value: ./text()
+    variableName: authenticatedUID
+  ↓userPermissions [steps.SourceStep-1778494233785]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1778494038302
+          - java.lang.String: 
+            - ↑value: ./document/permission/text()
+    variableName: userPermissions
+  ↓checkAndDelete [steps.SimpleStep-1778494310679]: 
+    expression: |
+      'var permissions = [];
+      //log.warn("###### userPermissions.getLength(): "+ userPermissions.getLength());
+      for (var i=0; i<userPermissions.getLength(); i++) {
+      	var permission = "" + userPermissions.item(i).getTextContent();
+      	//log.warn("###### permission: "+ permission);
+      	permissions.push(permission);
+      }
+      
+      var canDelete = false;
+      if (permissions.includes("samplerbac.data.delete:all")) {
+      	canDelete = true;
+      } else if (permissions.includes("samplerbac.data.delete:own")) {
+      	canDelete = authenticatedUID == uid;
+      }
+      '
+  ↓element [steps.ElementStep-1778495717323]: 
+    expression: canDelete
+    nodeName: canDelete
+  ↓Return [steps.ReturnStep-1778495604774]: 
+↓IfExist2 [steps.IfExistStep-1778494129818]: 
+  condition: IfExist2
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1778494038302
+        - java.lang.String: 
+          - ↑value: ./document/error
+  ↓Copy [steps.XMLCopyStep-1778494129821]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1778494038302
+          - java.lang.String: 
+            - ↑value: ./document/error
+  ↓Return [steps.ReturnStep-1778494129824]: 
+↓Error_structure [steps.XMLErrorStep-1778494129827]: 
+  message: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: PLAIN
+        - →→: You're not authorised to delete data
+↓uid [variables.RequestableVariable-1778494551246]: 

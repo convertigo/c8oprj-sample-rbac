@@ -53,209 +53,469 @@ title: Home
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       comment: Right toolbar button group
       tagName: ion-buttons
-      ↓ThemeSwitchButton [ngx.components.UIDynamicElement-1777967688503]: 
-        beanData: '{"ionBean":"Button","IonFill":"plain:clear"}'
-        comment: Toggles between light and dark themes
-        tagName: ion-button
-        ↓Class [ngx.components.UIAttribute-1777967688504]: 
-          attrName: class
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:toolbar-theme-button
-          comment: CSS class used to style the theme button
-        ↓Aria [ngx.components.UIAttribute-1777967688505]: 
-          attrName: aria-label
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: 'script:(this.global && this.global.themeDark) ? this.translate.instant(''Theme_Switch_To_Light'') : this.translate.instant(''Theme_Switch_To_Dark'')'
-          comment: Accessibility label describing the next theme action
-        ↓Event [ngx.components.UIControlEvent-1777967688506]: 
-          comment: Click handler for theme switching
-          ↓SetTheme [ngx.components.UIDynamicAction-1777967688507]: 
-            beanData: '{"ionBean":"SetThemeAction","dark":"script:!(this.global && this.global.themeDark)"}'
-            comment: Applies the opposite theme mode
-        ↓ThemeIcon [ngx.components.UIDynamicElement-1777967688508]: 
-          beanData: '{"ionBean":"Icon","IconName":"script:this?.global?.themeDark ? ''sunny-outline'' : ''moon-outline''"}'
-          comment: Dynamic icon reflecting the active theme
-          tagName: ion-icon
-          ↓IconName [ngx.components.UIAttribute-1777967688509]: 
-            attrName: '[name]'
-            attrValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: 'script:(this.global && this.global.themeDark) ? ''sunny-outline'' : ''moon-outline'''
-            comment: Binds the icon name to the current theme state
-      ↓LanguageSelector [ngx.components.UIDynamicElement-1777967688510]: 
-        beanData: |
-          '{
-           "ionBean": "Select",
-           "ControlName": "plain:name1770915137820",
-           "Justify": "plain:start"
-          }'
-        comment: Language selector displayed in the toolbar
-        tagName: ion-select
-        ↓Class [ngx.components.UIAttribute-1777967688511]: 
-          attrName: class
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:toolbar-lang-select
-          comment: CSS class used to style the language selector
-        ↓Aria [ngx.components.UIAttribute-1777967688512]: 
-          attrName: aria-label
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: script:'Language' | translate
-          comment: Accessibility label for language selection
-        ↓Interface [ngx.components.UIAttribute-1777967688513]: 
-          attrName: '[interface]'
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: script:'popover'
-          comment: Uses popover mode for option rendering
-        ↓Value [ngx.components.UIAttribute-1777967688514]: 
-          attrName: '[value]'
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: script:this.global?.currentLanguage?.() ?? 'en'
-          comment: Current selected language bound to global state
-        ↓SelectedText [ngx.components.UIAttribute-1777967688515]: 
-          attrName: '[selectedText]'
-          attrValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: script:(this.global?.getLanguageLabelKey?.() ??  'Lang_English') | translate
-          comment: Localized label shown for the selected language
-        ↓ChangeEvent [ngx.components.UIControlEvent-1777967688516]: 
-          attrName: (ionChange)
-          comment: Triggered when the selected language changes
-          eventName: ionChange
-          ↓SetLanguage [ngx.components.UIDynamicAction-1777967688517]: 
-            beanData: |
-              '{
-               "ionBean": "SetLanguageAction",
-               "language": "script:event.detail.value",
-               "storageKey": "plain:c8o-lang",
-               "globalProperty": "plain:currentLanguage"
-              }'
-            comment: Persists and applies the selected language
-        ↓LangEN [ngx.components.UIDynamicElement-1777967688518]: 
-          beanData: '{"ionBean":"SelectOption","Value":"plain:en"}'
-          comment: English language option
-          tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1777967688519]: 
-            comment: Translation key for the English option label
-            i18n: true
-            textValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: plain:Lang_English
-        ↓LangFR [ngx.components.UIDynamicElement-1777967688520]: 
-          beanData: '{"ionBean":"SelectOption","Value":"plain:fr"}'
-          comment: French language option
-          tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1777967688521]: 
-            comment: Translation key for the French option label
-            i18n: true
-            textValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: plain:Lang_French
-        ↓LangIT [ngx.components.UIDynamicElement-1777967688522]: 
-          beanData: '{"ionBean":"SelectOption","Value":"plain:it"}'
-          comment: Italian language option
-          tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1777967688523]: 
-            comment: Translation key for the Italian option label
-            i18n: true
-            textValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: plain:Lang_Italian
-        ↓LangES [ngx.components.UIDynamicElement-1777967688524]: 
-          beanData: '{"ionBean":"SelectOption","Value":"plain:es"}'
-          comment: Spanish language option
-          tagName: ion-select-option
-          ↓Text [ngx.components.UIText-1777967688525]: 
-            comment: Translation key for the Spanish option label
-            i18n: true
-            textValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: plain:Lang_Spanish
 ↓Content [ngx.components.UIDynamicElement-1777967688526]: 
   beanData: '{"ionBean":"Content"}'
   comment: Main scrollable content area for the home page
   tagName: ion-content
-  ↓WelcomeCard [ngx.components.UIDynamicElement-1777967688527]: 
-    beanData: '{"ionBean":"Card"}'
-    comment: Introductory card shown on first page load
-    tagName: ion-card
-    ↓CardHeader [ngx.components.UIDynamicElement-1777967688528]: 
-      beanData: '{"ionBean":"CardHeader"}'
-      comment: Header section for the welcome card
-      tagName: ion-card-header
-      ↓CardTitle [ngx.components.UIDynamicElement-1777967688529]: 
-        beanData: '{"ionBean":"CardTitle"}'
-        comment: Title area of the welcome card
-        tagName: ion-card-title
-        ↓Text [ngx.components.UIText-1777967688530]: 
-          comment: Translation key for the welcome card title
-          i18n: true
+  ↓Grid [ngx.components.UIDynamicElement-1778063201068]: 
+    beanData: '{"ionBean":"Grid"}'
+    tagName: ion-grid
+    ↓GridRow [ngx.components.UIDynamicElement-1778063201055]: 
+      beanData: '{"ionBean":"GridRow"}'
+      tagName: ion-row
+      ↓GridCol [ngx.components.UIDynamicElement-1778063201057]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓SelectContainer [ngx.components.UIDynamicElement-1778063245383]: 
+          beanData: |
+            '{
+             "ionBean": "Select",
+             "ControlName": "plain:name1778063245383",
+             "DoubleBinding": "source:{\"filter\":\"Global\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"sharedObject\":\"router.sharedObject\"}],\"path\":\"?.user\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}",
+             "Justify": "plain:start",
+             "Label": "plain:Login as : ",
+             "Placeholder": "plain:select a user",
+             "Value": "script:''''"
+            }'
+          tagName: ion-select
+          ↓SelectOption [ngx.components.UIDynamicElement-1778063245372]: 
+            beanData: '{"ionBean":"SelectOption","Value":"plain:admin1"}'
+            tagName: ion-select-option
+            ↓Text [ngx.components.UIText-1778063245374]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:admin1
+          ↓SelectOption1 [ngx.components.UIDynamicElement-1778063245376]: 
+            beanData: '{"ionBean":"SelectOption","Value":"plain:admin2"}'
+            tagName: ion-select-option
+            ↓Text [ngx.components.UIText-1778063245378]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:admin2
+          ↓SelectOption2 [ngx.components.UIDynamicElement-1778063245380]: 
+            beanData: '{"ionBean":"SelectOption","Value":"plain:user1"}'
+            tagName: ion-select-option
+            ↓Text [ngx.components.UIText-1778063245382]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:user1
+          ↓SelectOption3 [ngx.components.UIDynamicElement-1778063716411]: 
+            beanData: '{"ionBean":"SelectOption","Value":"plain:user2"}'
+            tagName: ion-select-option
+            ↓Text [ngx.components.UIText-1778063716414]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:user2
+          ↓SelectOption4 [ngx.components.UIDynamicElement-1778063730156]: 
+            beanData: '{"ionBean":"SelectOption","Value":"plain:guest1"}'
+            tagName: ion-select-option
+            ↓Text [ngx.components.UIText-1778063730159]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:guest1
+          ↓SelectOption5 [ngx.components.UIDynamicElement-1778063730162]: 
+            beanData: '{"ionBean":"SelectOption","Value":"plain:guest2"}'
+            tagName: ion-select-option
+            ↓Text [ngx.components.UIText-1778063730165]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:guest2
+          ↓Event [ngx.components.UIControlEvent-1778162014026]: 
+            attrName: (ionChange)
+            eventName: ionChange
+            ↓SetLocal [ngx.components.UIDynamicAction-1778166517378]: 
+              beanData: |
+                '{
+                 "ionBean": "SetLocalAction",
+                 "Property": "plain:userPermissions",
+                 "Value": "script:[]"
+                }'
+              ↓CallSequence [ngx.components.UIDynamicAction-1778162467282]: 
+                beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:sampleRBAC.Login"}'
+                ↓user [ngx.components.UIControlVariable-1778162483826]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Global","project":"sampleRBAC","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.user","prefix":"","suffix":"","custom":"","useCustom":false}}
+                ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1778487858436]: 
+                  beanData: '{"ionBean":"InvokeAction"}'
+                  stack: sampleRBAC.Application.NgxApp.GetPermissions
+                  ↓SetLocal [ngx.components.UIDynamicAction-1778487883216]: 
+                    beanData: |
+                      '{
+                       "ionBean": "SetLocalAction",
+                       "Property": "plain:userPermissions",
+                       "Value": "source:{\"filter\":\"Action\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1778487858436,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162014026,\"rootEvent\":true,\"pageLocals\":false},{\"priority\":1778166517378,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162467282,\"rootEvent\":false,\"pageLocals\":false}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                      }'
+                    ↓CallSequence [ngx.components.UIDynamicAction-1778487883219]: 
+                      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:sampleRBAC.GetData"}'
+                      ↓filteredDataToArray [ngx.components.UICustomAction-1778487883222]: 
+                        actionValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                              →: |
+                                '		let result = {};
+                                		if (vars.out.error) {
+                                			result["error"] = vars.out.error;
+                                		} else {
+                                			let isArray = Array.isArray(vars.out.object);
+                                			let data = isArray ? vars.out.object : new Array(vars.out.object);
+                                			result["data"] = data;		
+                                		}
+                                		console.log("result", result);
+                                		resolve(result);
+                                '
+                        ↓out [ngx.components.UIControlVariable-1778487883225]: 
+                          varValue: 
+                            - xmlizable: 
+                              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                              - MobileSmartSourceType: source:{"filter":"Action","project":"sampleRBAC","input":"","model":{"data":[{"priority":1778487883219,"rootEvent":false,"pageLocals":false},{"priority":1778162014026,"rootEvent":true,"pageLocals":false},{"priority":1778166517378,"rootEvent":false,"pageLocals":false},{"priority":1778162467282,"rootEvent":false,"pageLocals":false},{"priority":1778487858436,"rootEvent":false,"pageLocals":false},{"priority":1778487883216,"rootEvent":false,"pageLocals":false}],"path":"?.out","prefix":"","suffix":"","custom":"","useCustom":false}}
+                        ↓SetLocal [ngx.components.UIDynamicAction-1778487883228]: 
+                          beanData: |
+                            '{
+                             "ionBean": "SetLocalAction",
+                             "Property": "plain:result",
+                             "Value": "source:{\"filter\":\"Action\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1778487883222,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162014026,\"rootEvent\":true,\"pageLocals\":false},{\"priority\":1778166517378,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162467282,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162735525,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778168005578,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778487883216,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778487883219,\"rootEvent\":false,\"pageLocals\":false}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                            }'
+    ↓GridRow1 [ngx.components.UIDynamicElement-1778163396674]: 
+      beanData: '{"ionBean":"GridRow"}'
+      tagName: ion-row
+      ↓Directive [ngx.components.UIControlDirective-1778490641151]: 
+        directiveName: If
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.userPermissions","prefix":"","suffix":"?.length > 0","custom":"","useCustom":false}}
+        ↓GridCol [ngx.components.UIDynamicElement-1778163396677]: 
+          beanData: '{"ionBean":"GridCol"}'
+          tagName: ion-col
+          ↓Label [ngx.components.UIDynamicElement-1778163396746]: 
+            beanData: '{"ionBean":"Label"}'
+            tagName: ion-label
+            ↓Text [ngx.components.UIText-1778163396749]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Global","project":"sampleRBAC","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.user","prefix":"'Permissions of '+","suffix":"","custom":"","useCustom":false}}
+        ↓GridCol1 [ngx.components.UIDynamicElement-1778163396743]: 
+          beanData: '{"ionBean":"GridCol"}'
+          tagName: ion-col
+          ↓Grid [ngx.components.UIDynamicElement-1778484780626]: 
+            beanData: '{"ionBean":"Grid"}'
+            tagName: ion-grid
+            ↓Directive [ngx.components.UIControlDirective-1778163396752]: 
+              directiveItemName: permission
+              directiveSource: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.userPermissions","prefix":"","suffix":"","custom":"","useCustom":false}}
+              ↓GridRow [ngx.components.UIDynamicElement-1778484780628]: 
+                beanData: '{"ionBean":"GridRow"}'
+                tagName: ion-row
+                ↓GridCol [ngx.components.UIDynamicElement-1778484780630]: 
+                  beanData: '{"ionBean":"GridCol"}'
+                  tagName: ion-col
+                  ↓Label [ngx.components.UIDynamicElement-1778163396755]: 
+                    beanData: '{"ionBean":"Label"}'
+                    tagName: ion-label
+                    ↓Text [ngx.components.UIText-1778163396758]: 
+                      textValue: 
+                        - xmlizable: 
+                          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                          - MobileSmartSourceType: script:permission
+  ↓Directive [ngx.components.UIControlDirective-1778172100526]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.result","prefix":"","suffix":"?.error","custom":"","useCustom":false}}
+    ↓GenericItem [ngx.components.UIDynamicElement-1778484944351]: 
+      beanData: '{"ionBean":"GenericItem"}'
+      tagName: ion-item
+      ↓Text [ngx.components.UIText-1778174009225]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.result","prefix":"","suffix":"?.error?.message","custom":"","useCustom":false}}
+    ↓Button [ngx.components.UIDynamicElement-1778169169178]: 
+      beanData: '{"ionBean":"Button"}'
+      tagName: ion-button
+      ↓Label [ngx.components.UIDynamicElement-1778169169173]: 
+        beanData: '{"ionBean":"Label"}'
+        tagName: ion-label
+        ↓Text [ngx.components.UIText-1778169169175]: 
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Project_created
-    ↓CardContent [ngx.components.UIDynamicElement-1777967688531]: 
-      beanData: '{"ionBean":"CardContent"}'
-      comment: Body section containing onboarding instructions
-      tagName: ion-card-content
-      ↓ParagraphIntro [ngx.components.UIDynamicElement-1777967688532]: 
-        beanData: '{"ionBean":"Paragraph"}'
-        comment: Introductory onboarding sentence
-        tagName: p
-        ↓Text [ngx.components.UIText-1777967688533]: 
-          comment: Translation key for the introductory sentence
-          i18n: true
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Start_building_your_app
-      ↓ParagraphStep1 [ngx.components.UIDynamicElement-1777967688534]: 
-        beanData: '{"ionBean":"Paragraph"}'
-        comment: First onboarding step description
-        tagName: p
-        ↓Text [ngx.components.UIText-1777967688535]: 
-          comment: Translation key for onboarding step 1
-          i18n: true
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Add_your_first_page
-      ↓ParagraphStep2 [ngx.components.UIDynamicElement-1777967688536]: 
-        beanData: '{"ionBean":"Paragraph"}'
-        comment: Second onboarding step description
-        tagName: p
-        ↓Text [ngx.components.UIText-1777967688537]: 
-          comment: Translation key for onboarding step 2
-          i18n: true
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Create_a_sequence_for_backend_logic
-      ↓ParagraphStep3 [ngx.components.UIDynamicElement-1777967688538]: 
-        beanData: '{"ionBean":"Paragraph"}'
-        comment: Third onboarding step description
-        tagName: p
-        ↓Text [ngx.components.UIText-1777967688539]: 
-          comment: Translation key for onboarding step 3
-          i18n: true
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Run_and_preview_from_Studio
+              - MobileSmartSourceType: plain:Fill Database with sample permissions
+      ↓Event [ngx.components.UIControlEvent-1778169169177]: 
+        ↓CallSequence [ngx.components.UIDynamicAction-1778489156991]: 
+          beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:sampleRBAC.InitAddRolesAndPermissions"}'
+          ↓SetGlobal [ngx.components.UIDynamicAction-1778491632672]: 
+            beanData: |
+              '{
+               "ionBean": "SetGlobalAction",
+               "Property": "plain:user",
+               "Value": "script:''''"
+              }'
+          ↓SetLocal [ngx.components.UIDynamicAction-1778491632675]: 
+            beanData: |
+              '{
+               "ionBean": "SetLocalAction",
+               "Property": "plain:userPermissions",
+               "Value": "script:[]"
+              }'
+          ↓SetLocal1 [ngx.components.UIDynamicAction-1778491632678]: 
+            beanData: |
+              '{
+               "ionBean": "SetLocalAction",
+               "Property": "plain:result",
+               "Value": "script:{}"
+              }'
+  ↓Directive1 [ngx.components.UIControlDirective-1778172144188]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.result","prefix":"","suffix":"?.data","custom":"","useCustom":false}}
+    ↓SegmentContainer [ngx.components.UIDynamicElement-1778502073465]: 
+      beanData: |
+        '{
+         "ionBean": "Segment",
+         "ControlName": "plain:name1778502073465",
+         "DoubleBinding": "source:{\"filter\":\"Local\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"localObject\":\"local\"}],\"path\":\"?.panel\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}",
+         "IonColor": "plain:warning"
+        }'
+      tagName: ion-segment
+      ↓SegmentButton [ngx.components.UIDynamicElement-1778502073452]: 
+        beanData: '{"ionBean":"SegmentButton","Value":"plain:show"}'
+        tagName: ion-segment-button
+        ↓Label [ngx.components.UIDynamicElement-1778502073454]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1778502073456]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:Show data
+        ↓Icon [ngx.components.UIDynamicElement-1778502684747]: 
+          beanData: '{"ionBean":"Icon","IconName":"source:{\"filter\":\"Icon\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"icon\":\"''eye-outline''\"}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+          tagName: ion-icon
+      ↓SegmentButton1 [ngx.components.UIDynamicElement-1778502073458]: 
+        beanData: '{"ionBean":"SegmentButton","Value":"plain:delete"}'
+        tagName: ion-segment-button
+        ↓Label [ngx.components.UIDynamicElement-1778502073460]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1778502073462]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:Delete data
+        ↓Icon [ngx.components.UIDynamicElement-1778502073464]: 
+          beanData: '{"ionBean":"Icon","IconName":"source:{\"filter\":\"Icon\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"icon\":\"''trash-bin-outline''\"}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+          tagName: ion-icon
+    ↓Directive1 [ngx.components.UIControlDirective-1778502931339]: 
+      directiveName: If
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.panel","prefix":"","suffix":"== 'show'","custom":"","useCustom":false}}
+      ↓Directive [ngx.components.UIControlDirective-1778484287229]: 
+        directiveItemName: item
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.result","prefix":"","suffix":"?.data","custom":"","useCustom":false}}
+        ↓UseSharedComponent [ngx.components.UIUseShared-1778486717457]: 
+          sharedcomponent: sampleRBAC.Application.NgxApp.CardItem
+          ↓item [ngx.components.UIUseVariable-1778486717461]: 
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:item
+          ↓Event [ngx.components.UIControlEvent-1778496061154]: 
+            attrName: (onDelete)
+            eventName: onDelete
+            ↓CallSequence [ngx.components.UIDynamicAction-1778496101600]: 
+              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:sampleRBAC.DeleteData"}'
+              ↓uid [ngx.components.UIControlVariable-1778496111300]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Action","project":"sampleRBAC","input":"","model":{"data":[{"priority":1778496061154,"rootEvent":true,"pageLocals":false}],"path":"?.out","prefix":"","suffix":"?.uid","custom":"","useCustom":false}}
+              ↓IfElse [ngx.components.UIDynamicIf-1778496994662]: 
+                beanData: '{"ionBean":"IfElseAction","condition":"source:{\"filter\":\"Sequence\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"sampleRBAC.DeleteData\",\"marker\":\"\"}],\"path\":\"?.canDelete\",\"prefix\":\"\",\"suffix\":\"== ''true''\",\"custom\":\"\",\"useCustom\":false}}"}'
+                ↓FakeDeleteAction [ngx.components.UICustomAction-1778497074904]: 
+                  actionValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                        →: |
+                          		var result = vars.result;
+                          		result.data = result.data.filter(ob => ob.uid != vars.uid);
+                          		resolve(result);
+                          
+                  ↓result [ngx.components.UIControlVariable-1778497097285]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.result","prefix":"","suffix":"","custom":"","useCustom":false}}
+                  ↓uid [ngx.components.UIControlVariable-1778499955046]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Action","project":"sampleRBAC","input":"","model":{"data":[{"priority":1778496061154,"rootEvent":true,"pageLocals":false}],"path":"?.out","prefix":"","suffix":"?.uid","custom":"","useCustom":false}}
+                  ↓Toast [ngx.components.UIDynamicAction-1778505593721]: 
+                    beanData: |
+                      '{
+                       "ionBean": "ToastAction",
+                       "IonColor": "plain:success",
+                       "message": "source:{\"filter\":\"Action\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1778496061154,\"rootEvent\":true,\"pageLocals\":false}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"?.uid + '' deleted !''\",\"custom\":\"\",\"useCustom\":false}}",
+                       "duration": "plain:1000",
+                       "position": "plain:middle"
+                      }'
+                  ↓SetLocal [ngx.components.UIDynamicAction-1778500173710]: 
+                    beanData: |
+                      '{
+                       "ionBean": "SetLocalAction",
+                       "Property": "plain:result",
+                       "Value": "source:{\"filter\":\"Action\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1778497074904,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778496061154,\"rootEvent\":true,\"pageLocals\":false},{\"priority\":1778496101600,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778496994662,\"rootEvent\":false,\"pageLocals\":false}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                      }'
+                ↓Else_Handler [ngx.components.UIActionElseEvent-1778497008032]: 
+                  ↓Toast [ngx.components.UIDynamicAction-1778496393162]: 
+                    beanData: |
+                      '{
+                       "ionBean": "ToastAction",
+                       "IonColor": "plain:warning",
+                       "message": "plain:You''re are not authorised to delete data",
+                       "duration": "plain:2000",
+                       "position": "plain:middle"
+                      }'
+    ↓Directive2 [ngx.components.UIControlDirective-1778502958778]: 
+      directiveName: If
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.panel","prefix":"","suffix":"== 'delete'","custom":"","useCustom":false}}
+      ↓GenericItem [ngx.components.UIDynamicElement-1778504533973]: 
+        beanData: '{"ionBean":"GenericItem"}'
+        tagName: ion-item
+        ↓Label [ngx.components.UIDynamicElement-1778504533975]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text1 [ngx.components.UIText-1778504419833]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Global","project":"sampleRBAC","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.user","prefix":"","suffix":"","custom":"","useCustom":false}}
+        ↓Button [ngx.components.UIDynamicElement-1778504287510]: 
+          beanData: '{"ionBean":"Button"}'
+          tagName: ion-button
+          ↓Label [ngx.components.UIDynamicElement-1778504287512]: 
+            beanData: '{"ionBean":"Label"}'
+            tagName: ion-label
+            ↓Text [ngx.components.UIText-1778504287514]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Try delete user2
+          ↓Event [ngx.components.UIControlEvent-1778504287516]: 
+            ↓CallSequence [ngx.components.UIDynamicAction-1778502985922]: 
+              beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:sampleRBAC.DeleteData"}'
+              ↓uid [ngx.components.UIControlVariable-1778502985925]: 
+                varValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: script:'user2'
+              ↓IfElse [ngx.components.UIDynamicIf-1778502985928]: 
+                beanData: '{"ionBean":"IfElseAction","condition":"source:{\"filter\":\"Sequence\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"sampleRBAC.DeleteData\",\"marker\":\"\"}],\"path\":\"?.canDelete\",\"prefix\":\"\",\"suffix\":\"== ''true''\",\"custom\":\"\",\"useCustom\":false}}"}'
+                ↓FakeDeleteAction [ngx.components.UICustomAction-1778502985931]: 
+                  actionValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                        →: |
+                          		var result = vars.result;
+                          		result.data = result.data.filter(ob => ob.uid != vars.uid);
+                          		resolve(result);
+                          
+                  ↓result [ngx.components.UIControlVariable-1778502985934]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.result","prefix":"","suffix":"","custom":"","useCustom":false}}
+                  ↓uid [ngx.components.UIControlVariable-1778502985937]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'user2'
+                  ↓Toast [ngx.components.UIDynamicAction-1778504781953]: 
+                    beanData: |
+                      '{
+                       "ionBean": "ToastAction",
+                       "IonColor": "plain:success",
+                       "message": "plain:User2 deleted !",
+                       "duration": "plain:1000",
+                       "position": "plain:middle"
+                      }'
+                  ↓SetLocal [ngx.components.UIDynamicAction-1778502985940]: 
+                    beanData: |
+                      '{
+                       "ionBean": "SetLocalAction",
+                       "Property": "plain:result",
+                       "Value": "source:{\"filter\":\"Action\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1778502985931,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778496061154,\"rootEvent\":true,\"pageLocals\":false},{\"priority\":1778502985922,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778502985928,\"rootEvent\":false,\"pageLocals\":false}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+                      }'
+                    ↓panel [ngx.components.UIDynamicAction-1778505147759]: 
+                      beanData: |
+                        '{
+                         "ionBean": "SetLocalAction",
+                         "Property": "plain:panel",
+                         "Value": "script:''show''"
+                        }'
+                ↓Else_Handler [ngx.components.UIActionElseEvent-1778502985943]: 
+                  ↓Toast [ngx.components.UIDynamicAction-1778502985946]: 
+                    beanData: |
+                      '{
+                       "ionBean": "ToastAction",
+                       "IonColor": "plain:warning",
+                       "message": "plain:You''re are not authorised to delete data !",
+                       "duration": "plain:2000",
+                       "position": "plain:middle"
+                      }'
+↓PageEvent [ngx.components.UIPageEvent-1778163508410]: 
+  ↓SetGlobal [ngx.components.UIDynamicAction-1778064149867]: 
+    beanData: |
+      '{
+       "ionBean": "SetGlobalAction",
+       "Property": "plain:user",
+       "Value": "script:''''"
+      }'
+  ↓SetLocal [ngx.components.UIDynamicAction-1778166612272]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:userPermissions",
+       "Value": "script:[]"
+      }'
+  ↓SetLocal1 [ngx.components.UIDynamicAction-1778173944356]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:result",
+       "Value": "script:{}"
+      }'
+  ↓panel [ngx.components.UIDynamicAction-1778502523877]: 
+    beanData: |
+      '{
+       "ionBean": "SetLocalAction",
+       "Property": "plain:panel",
+       "Value": "script:''show''"
+      }'

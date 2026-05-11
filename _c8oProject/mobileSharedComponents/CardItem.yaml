@@ -1,0 +1,105 @@
+↓CardContainer [ngx.components.UIDynamicElement-1778486717418]: 
+  beanData: '{"ionBean":"Card"}'
+  tagName: ion-card
+  ↓CardHeader [ngx.components.UIDynamicElement-1778486717421]: 
+    beanData: '{"ionBean":"CardHeader"}'
+    tagName: ion-card-header
+    ↓CardTitle [ngx.components.UIDynamicElement-1778486717424]: 
+      beanData: '{"ionBean":"CardTitle"}'
+      tagName: ion-card-title
+      ↓TextItem [ngx.components.UIDynamicElement-1778486717427]: 
+        beanData: '{"ionBean":"TextItem"}'
+        tagName: ion-text
+        ↓Text [ngx.components.UIText-1778486717430]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: script:this.item.uid
+      ↓Directive [ngx.components.UIControlDirective-1778487284577]: 
+        directiveName: If
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.cardPermissions","prefix":"","suffix":"?.includes('samplerbac.data.write:all')","custom":"local?.cardPermissions?.includes('samplerbac.data.write:all') || local?.cardPermissions?.includes('samplerbac.data.write:own')","useCustom":true}}
+        ↓Button [ngx.components.UIDynamicElement-1778492265725]: 
+          beanData: |
+            '{
+             "ionBean": "Button",
+             "IonColor": "plain:light",
+             "IonSize": "plain:small"
+            }'
+          tagName: ion-button
+          ↓Event [ngx.components.UIControlEvent-1778492265731]: 
+            ↓Toast [ngx.components.UIDynamicAction-1778493898150]: 
+              beanData: |
+                '{
+                 "ionBean": "ToastAction",
+                 "message": "plain:Edition: not implemented",
+                 "duration": "plain:1000",
+                 "position": "plain:middle"
+                }'
+          ↓Icon1 [ngx.components.UIDynamicElement-1778486717433]: 
+            beanData: '{"ionBean":"Icon","IconName":"source:{\"filter\":\"Icon\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"icon\":\"''pencil''\"}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+            tagName: ion-icon
+      ↓Directive1 [ngx.components.UIControlDirective-1778488584148]: 
+        directiveName: If
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.cardPermissions","prefix":"","suffix":"?.includes('samplerbac.data.delete:all')","custom":"","useCustom":false}}
+        ↓Button [ngx.components.UIDynamicElement-1778492371250]: 
+          beanData: |
+            '{
+             "ionBean": "Button",
+             "IonColor": "plain:light",
+             "IonSize": "plain:small"
+            }'
+          tagName: ion-button
+          ↓Event [ngx.components.UIControlEvent-1778492371253]: 
+            ↓EmitEvent [ngx.components.UIDynamicEmit-1778495931068]: 
+              beanData: |
+                '{
+                 "ionBean": "EmitEventAction",
+                 "event": "plain:sampleRBAC.Application.NgxApp.CardItem.onDelete",
+                 "data": "script:{uid: this.item.uid}"
+                }'
+          ↓Icon [ngx.components.UIDynamicElement-1778486717436]: 
+            beanData: '{"ionBean":"Icon","IconName":"source:{\"filter\":\"Icon\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"icon\":\"''trash-outline''\"}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+            tagName: ion-icon
+  ↓CardContent [ngx.components.UIDynamicElement-1778486717439]: 
+    beanData: '{"ionBean":"CardContent"}'
+    tagName: ion-card-content
+    ↓TextItem [ngx.components.UIDynamicElement-1778486717442]: 
+      beanData: '{"ionBean":"TextItem"}'
+      tagName: ion-text
+      ↓Text1 [ngx.components.UIText-1778486717445]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:this.item.firstname
+      ↓Text2 [ngx.components.UIText-1778486717448]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'plain: '
+      ↓Text3 [ngx.components.UIText-1778486717451]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:this.item.lastname
+↓item [ngx.components.UICompVariable-1778486717455]: 
+  value: '{}'
+↓SharedComponent_Event [ngx.components.UISharedComponentEvent-1778488033754]: 
+  componentEvent: onInit
+  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1778488054111]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: sampleRBAC.Application.NgxApp.GetPermissions
+    ↓SetLocal [ngx.components.UIDynamicAction-1778488096840]: 
+      beanData: |
+        '{
+         "ionBean": "SetLocalAction",
+         "Property": "plain:cardPermissions",
+         "Value": "source:{\"filter\":\"Action\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1778488054111,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778488033754,\"rootEvent\":true,\"pageLocals\":false}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+        }'
+↓onDelete [ngx.components.UICompEvent-1778495897297]: 
+  attrName: onDelete

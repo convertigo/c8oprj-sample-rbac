@@ -1,0 +1,228 @@
+accessibility: Private
+comment: Initialisation user/group, group/role, role/permission
+↓Call_Sequence [steps.SequenceStep-1777986872510]: 
+  comment: Definition des user/group, group/role, role/permission
+  output: true
+  sourceSequence: sampleRBAC.InitLoadRolesAndPermissions
+↓jIf1 [steps.IfStep-1778054889636]: 
+  comment: Suppression user/group, group/role, role/permission
+  condition: true
+  ↓Iterator [steps.IteratorStep-1778053101378]: 
+    comment: Suppression des utilisateurs dans groupe
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1777986872510
+          - java.lang.String: 
+            - ↑value: ./document/userInGroup
+    ↓Call_Sequence [steps.SequenceStep-1778053478335]: 
+      sourceSequence: lib_FullSyncGrp.RemoveUserFromGroup
+      ↓user [variables.StepVariable-1778053495478]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778053101378
+              - java.lang.String: 
+                - ↑value: ./@user
+      ↓group [variables.StepVariable-1778053495480]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778053101378
+              - java.lang.String: 
+                - ↑value: ./@group
+  ↓Iterator1 [steps.IteratorStep-1778053101396]: 
+    comment: Suppression des roles dans groupe
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1777986872510
+          - java.lang.String: 
+            - ↑value: ./document/roleInGroup
+    ↓Call_Sequence [steps.SequenceStep-1778053567188]: 
+      sourceSequence: lib_FullSyncGrp.RemoveRoleFromGroup
+      ↓role [variables.StepVariable-1778053600997]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778053101396
+              - java.lang.String: 
+                - ↑value: ./@role
+      ↓group [variables.StepVariable-1778053600999]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778053101396
+              - java.lang.String: 
+                - ↑value: ./@group
+  ↓Iterator2 [steps.IteratorStep-1778053101414]: 
+    comment: Suppression des permissions dans role
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1777986872510
+          - java.lang.String: 
+            - ↑value: ./document/permissionInRole
+    ↓Call_Sequence [steps.SequenceStep-1778053571877]: 
+      sourceSequence: lib_FullSyncGrp.RemovePermissionFromRole
+      ↓role [variables.StepVariable-1778053604799]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778053101414
+              - java.lang.String: 
+                - ↑value: ./@role
+      ↓element [variables.StepVariable-1778053604801]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778053101414
+              - java.lang.String: 
+                - ↑value: ./@element
+      ↓action [variables.StepVariable-1778053604803]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778053101414
+              - java.lang.String: 
+                - ↑value: ./@action
+      ↓scope [variables.StepVariable-1778053604805]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778053101414
+              - java.lang.String: 
+                - ↑value: ./@scope
+↓jIf [steps.IfStep-1778054761755]: 
+  comment: Ajout user/group, group/role, role/permission
+  condition: true
+  ↓Iterator [steps.IteratorStep-1777986894417]: 
+    comment: Ajout des utilisateurs dans groupe
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1777986872510
+          - java.lang.String: 
+            - ↑value: ./document/userInGroup
+    ↓Call_Sequence [steps.SequenceStep-1778055991907]: 
+      sourceSequence: lib_FullSyncGrp.SetUserInGroup
+      ↓user [variables.StepVariable-1778056009715]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1777986894417
+              - java.lang.String: 
+                - ↑value: ./@user
+      ↓group [variables.StepVariable-1778056009717]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1777986894417
+              - java.lang.String: 
+                - ↑value: ./@group
+  ↓Iterator1 [steps.IteratorStep-1777987053263]: 
+    comment: Ajout des roles dans groupe
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1777986872510
+          - java.lang.String: 
+            - ↑value: ./document/roleInGroup
+    ↓Call_Sequence [steps.SequenceStep-1778056046755]: 
+      sourceSequence: lib_FullSyncGrp.SetRoleInGroup
+      ↓role [variables.StepVariable-1778056064163]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1777987053263
+              - java.lang.String: 
+                - ↑value: ./@role
+      ↓group [variables.StepVariable-1778056064165]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1777987053263
+              - java.lang.String: 
+                - ↑value: ./@group
+  ↓Iterator2 [steps.IteratorStep-1778056261916]: 
+    comment: Ajout des permissions dans role
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1777986872510
+          - java.lang.String: 
+            - ↑value: ./document/permissionInRole
+    ↓Call_Sequence [steps.SequenceStep-1778056261919]: 
+      sourceSequence: lib_FullSyncGrp.SetPermissionInRole
+      ↓role [variables.StepVariable-1778056301588]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778056261916
+              - java.lang.String: 
+                - ↑value: ./@role
+      ↓element [variables.StepVariable-1778056301590]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778056261916
+              - java.lang.String: 
+                - ↑value: ./@element
+      ↓action [variables.StepVariable-1778056301592]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778056261916
+              - java.lang.String: 
+                - ↑value: ./@action
+      ↓scope [variables.StepVariable-1778056301594]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1778056261916
+              - java.lang.String: 
+                - ↑value: ./@scope
