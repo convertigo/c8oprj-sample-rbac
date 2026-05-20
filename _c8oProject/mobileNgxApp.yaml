@@ -62,8 +62,6 @@ tplProjectName: mobilebuilder_tpl_8_4_0_ngx
 ↓GetPermissions [ngx.components.UIActionStack-1778487704301]: 🗏 mobileSharedActions/GetPermissions.yaml
 ↓CardItem [ngx.components.UISharedRegularComponent-1778486717414]: 🗏 mobileSharedComponents/CardItem.yaml
 ↓Page [ngx.components.PageComponent-1777967688484]: 🗏 mobilePages/Page.yaml
-↓UseSharedComponent [ngx.components.UIUseShared-1778065215472]: 
-  sharedcomponent: sampleRBAC.Application.NgxApp.Menu
 ↓Style [ngx.components.UIStyle-1777967688485]: 
   comment: You can add some global application styles here
   styleContent: 
