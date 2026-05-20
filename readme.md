@@ -31,13 +31,13 @@ For more technical informations : [documentation](./project.md)
      <tr><td>To contribute</td><td>
 
      ```
-     sampleRBAC=D:/Dev/eclipse-jee-2025-09/cems-hotfix/runtime-Cems_hotfix/sampleRBAC/.git:branch=master
+     sampleRBAC=https://github.com/convertigo/c8oprj-sample-rbac.git:branch=8.4.0.0
      ```
      </td></tr>
      <tr><td>To simply use</td><td>
 
      ```
-     sampleRBAC=D:/Dev/eclipse-jee-2025-09/cems-hotfix/runtime-Cems_hotfix/sampleRBAC//archive/master.zip
+     sampleRBAC=https://github.com/convertigo/c8oprj-sample-rbac/archive/8.4.0.0.zip
      ```
      </td></tr>
     </table>
