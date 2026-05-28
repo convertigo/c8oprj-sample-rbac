@@ -3,7 +3,7 @@
 
 # sampleRBAC
 
-Convertigo NGX builder Project
+RBAC sample project
 
 
 For more technical informations : [documentation](./project.md)

@@ -1,7 +1,7 @@
 
 # ![](https://github.com/convertigo/convertigo/blob/develop/engine/src/com/twinsoft/convertigo/beans/core/images/project_color_16x16.png?raw=true "Project") sampleRBAC
 
-Convertigo NGX builder Project
+RBAC sample project
 
 <details><summary><span style="color:DarkGoldenRod"><i>References</i></span></summary><blockquote><p>
 

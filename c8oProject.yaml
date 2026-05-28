@@ -1,6 +1,6 @@
 ↑convertigo: 8.4.0.m006
 ↓sampleRBAC [core.Project]: 
-  comment: Convertigo NGX builder Project
+  comment: RBAC sample project
   contextTimeout: 59
   corsOrigin: =Origin
   httpSessionTimeout: 60
