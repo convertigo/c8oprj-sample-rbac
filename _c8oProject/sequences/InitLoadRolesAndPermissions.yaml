@@ -1,5 +1,5 @@
 accessibility: Private
-comment: Definition des user/group, group/role, role/permission
+comment: Definition of user/group, group/role, role/permission
 ↓DefineUGRP [steps.SimpleStep-1777969992985]: 
   expression: |
     'var userGroups = [

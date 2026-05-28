@@ -1,4 +1,5 @@
 accessibility: Private
+comment: Retrieve all data accessible to the currently logged-in user
 ↓defineData [steps.SimpleStep-1778165097984]: 
   expression: |
     'var data = [

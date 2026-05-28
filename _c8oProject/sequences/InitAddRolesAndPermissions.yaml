@@ -1,5 +1,5 @@
 accessibility: Private
-comment: Initialisation user/group, group/role, role/permission
+comment: Initialization of user/group, group/role, role/permission
 ↓Call_Sequence [steps.SequenceStep-1777986872510]: 
   comment: Definition des user/group, group/role, role/permission
   output: true

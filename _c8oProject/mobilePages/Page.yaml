@@ -13,6 +13,12 @@ scriptContent:
         	/*End_c8o_PageDeclaration*/
         /*Begin_c8o_PageConstructor*/
         		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageInitialization*/
+        		/*End_c8o_PageInitialization*/
+        /*Begin_c8o_PageAfterViewInit*/
+        		/*End_c8o_PageAfterViewInit*/
+        /*Begin_c8o_PageFinalization*/
+        		/*End_c8o_PageFinalization*/
         /*Begin_c8o_PageFunction*/
         	/*End_c8o_PageFunction*/
         
@@ -49,15 +55,120 @@ title: Home
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: plain:Home
-    ↓ButtonSet2 [ngx.components.UIDynamicElement-1777967688502]: 
+    ↓ButtonSet2 [ngx.components.UIDynamicElement-1779886462162]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
-      comment: Right toolbar button group
       tagName: ion-buttons
 ↓Content [ngx.components.UIDynamicElement-1777967688526]: 
   beanData: '{"ionBean":"Content"}'
   comment: Main scrollable content area for the home page
   tagName: ion-content
-  ↓Grid [ngx.components.UIDynamicElement-1778063201068]: 
+  ↓InfosGroup [ngx.components.UIDynamicElement-1779877336886]: 
+    beanData: '{"ionBean":"AccordionGroup","Multiple":"plain:true"}'
+    tagName: ion-accordion-group
+    ↓Infos [ngx.components.UIDynamicElement-1779877336888]: 
+      beanData: '{"ionBean":"Accordion","Value":"plain:infos"}'
+      tagName: ion-accordion
+      ↓GenericItem [ngx.components.UIDynamicElement-1779877336890]: 
+        beanData: |
+          '{
+           "ionBean": "GenericItem",
+           "Lines": "plain:none",
+           "IonSlot": "plain:header"
+          }'
+        tagName: ion-item
+        ↓Label [ngx.components.UIDynamicElement-1779877336892]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1779877336894]: 
+            i18n: true
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:Informations
+      ↓Div [ngx.components.UIDynamicElement-1779878236684]: 
+        beanData: '{"ionBean":"DivTag"}'
+        tagName: div
+        ↓Attr [ngx.components.UIAttribute-1779878254639]: 
+          attrName: class
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:ion-padding
+        ↓Attr1 [ngx.components.UIAttribute-1779878330493]: 
+          attrName: slot
+          attrValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:content
+        ↓Fragment [ngx.components.UICustom-1779878706069]: 
+          htmlTemplate: |
+            '{{''This_sample_project_uses_the_'' | translate}} <code>lib_FullSyncGrp</code> {{''library_to_define_users__groups__roles_a'' | translate}}.<br/>
+            {{''This_example_is_based_on_a_dataset_of_si'' | translate}} ({{''see_sequence'' | translate}} <code>GetData</code>).<br/>
+            <br/>{{''Permissions_use_the_format'' | translate}} <code>element.action:scope</code> {{''with'' | translate}}
+            <table>
+            	<tr>
+            		<th>{{''T_Key'' | translate}}</th>
+            		<th>{{''T_Value'' | translate}}</th>
+            		<th>{{''T_Explanation'' | translate}}</th>
+            	</tr>
+            	<tr>
+            		<td>element</td>
+            		<td>samplerbac.data</td>
+            		<td>{{''to_target_the__data__of_the_sampleRBAC_p'' | translate}}</td>
+            	</tr>
+            	<tr>
+            		<td>action</td>
+            		<td>read | write | delete</td>
+            		<td>{{''for_presentation_edition_deletion_of__da'' | translate }}</td>
+            	</tr>
+            	<tr>
+            		<td>scope</td>
+            		<td>all | own</td>
+            		<td></td>
+            	</tr>
+            </table>
+            note: <code>element</code>, <code>action</code> {{''can_take_any_value'' | translate}}
+            <br>
+            <br>{{''Users_are_divided_into_different_groups_'' | translate}} ({{''see_sequence'' | translate}} <code>InitLoadRolesAndPermissions</code>) :
+            <table>
+            	<tr>
+            		<th>{{''T_User'' | translate}}</th>
+            		<th>{{''T_Group'' | translate}}</th>
+            		<th>{{''T_Role'' | translate}}</th>
+            		<th>{{''T_Permission'' | translate}}</th>
+            		<th>{{''T_Explanation'' | translate}}</th>
+            	</tr>
+            	<tr>
+            		<td>admin1</td>
+            		<td>full_admins</td>
+            		<td>data_admin</td>
+            		<td>samplerbac.data.read:all<br/>samplerbac.data.write:all<br/>samplerbac.data.delete:all</td>
+            		<td>{{''can_read_view_all_data_on_sampleRBAC'' | translate}}<br/>{{''can_write_modify_all_data_on_sampleRBAC'' | translate}}<br/>{{''can_delete_all_data_on_sampleRBAC'' | translate}}</td>
+            	</tr>
+            	<tr>
+            		<td>admin2</td>
+            		<td>restricted_admins</td>
+            		<td>data_editor</td>
+            		<td>samplerbac.data.read:all<br/>samplerbac.data.write:all</td>
+            		<td>{{''can_read_view_all_data_on_sampleRBAC'' | translate}}<br/>{{''can_write_modify_all_data_on_sampleRBAC'' | translate}}</td>
+            	</tr>
+            	<tr>
+            		<td>user1<br/>user2</td>
+            		<td>users</td>
+            		<td>user_editor</td>
+            		<td>samplerbac.data.read:own<br/>samplerbac.data.write:own</td>
+            		<td>{{''can_read_view_its_own_data_on_sampleRBAC'' | translate}}<br/>{{''can_write_modify_its_own_data_on_sampleR'' | translate}}</td>
+            	</tr>
+            	<tr>
+            		<td>guest1<br/>guest2</td>
+            		<td>guests</td>
+            		<td>guest_viewer</td>
+            		<td>samplerbac.data.read:own</td>
+            		<td>{{''can_read_view_its_own_data_on_sampleRBAC'' | translate}}</td>
+            	</tr>
+            </table>
+            '
+  ↓Connection [ngx.components.UIDynamicElement-1778063201068]: 
     beanData: '{"ionBean":"Grid"}'
     tagName: ion-grid
     ↓GridRow [ngx.components.UIDynamicElement-1778063201055]: 
@@ -73,8 +184,8 @@ title: Home
              "ControlName": "plain:name1778063245383",
              "DoubleBinding": "source:{\"filter\":\"Global\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"sharedObject\":\"router.sharedObject\"}],\"path\":\"?.user\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}",
              "Justify": "plain:start",
-             "Label": "plain:Login as : ",
-             "Placeholder": "plain:select a user",
+             "Label": "script:''login_as__'' | translate",
+             "Placeholder": "script:''select_a_user'' | translate",
              "Value": "script:''''"
             }'
           tagName: ion-select
@@ -184,52 +295,6 @@ title: Home
                              "Property": "plain:result",
                              "Value": "source:{\"filter\":\"Action\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1778487883222,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162014026,\"rootEvent\":true,\"pageLocals\":false},{\"priority\":1778166517378,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162467282,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162735525,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778168005578,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778487883216,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778487883219,\"rootEvent\":false,\"pageLocals\":false}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                             }'
-    ↓GridRow1 [ngx.components.UIDynamicElement-1778163396674]: 
-      beanData: '{"ionBean":"GridRow"}'
-      tagName: ion-row
-      ↓Directive [ngx.components.UIControlDirective-1778490641151]: 
-        directiveName: If
-        directiveSource: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.userPermissions","prefix":"","suffix":"?.length > 0","custom":"","useCustom":false}}
-        ↓GridCol [ngx.components.UIDynamicElement-1778163396677]: 
-          beanData: '{"ionBean":"GridCol"}'
-          tagName: ion-col
-          ↓Label [ngx.components.UIDynamicElement-1778163396746]: 
-            beanData: '{"ionBean":"Label"}'
-            tagName: ion-label
-            ↓Text [ngx.components.UIText-1778163396749]: 
-              textValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: source:{"filter":"Global","project":"sampleRBAC","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.user","prefix":"'Permissions of '+","suffix":"","custom":"","useCustom":false}}
-        ↓GridCol1 [ngx.components.UIDynamicElement-1778163396743]: 
-          beanData: '{"ionBean":"GridCol"}'
-          tagName: ion-col
-          ↓Grid [ngx.components.UIDynamicElement-1778484780626]: 
-            beanData: '{"ionBean":"Grid"}'
-            tagName: ion-grid
-            ↓Directive [ngx.components.UIControlDirective-1778163396752]: 
-              directiveItemName: permission
-              directiveSource: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                  - MobileSmartSourceType: source:{"filter":"Local","project":"sampleRBAC","input":"","model":{"data":[{"localObject":"local"}],"path":"?.userPermissions","prefix":"","suffix":"","custom":"","useCustom":false}}
-              ↓GridRow [ngx.components.UIDynamicElement-1778484780628]: 
-                beanData: '{"ionBean":"GridRow"}'
-                tagName: ion-row
-                ↓GridCol [ngx.components.UIDynamicElement-1778484780630]: 
-                  beanData: '{"ionBean":"GridCol"}'
-                  tagName: ion-col
-                  ↓Label [ngx.components.UIDynamicElement-1778163396755]: 
-                    beanData: '{"ionBean":"Label"}'
-                    tagName: ion-label
-                    ↓Text [ngx.components.UIText-1778163396758]: 
-                      textValue: 
-                        - xmlizable: 
-                          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                          - MobileSmartSourceType: script:permission
   ↓Directive [ngx.components.UIControlDirective-1778172100526]: 
     directiveName: If
     directiveSource: 
@@ -240,6 +305,7 @@ title: Home
       beanData: '{"ionBean":"GenericItem"}'
       tagName: ion-item
       ↓Text [ngx.components.UIText-1778174009225]: 
+        i18n: true
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
@@ -251,6 +317,7 @@ title: Home
         beanData: '{"ionBean":"Label"}'
         tagName: ion-label
         ↓Text [ngx.components.UIText-1778169169175]: 
+          i18n: true
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
@@ -301,6 +368,7 @@ title: Home
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text [ngx.components.UIText-1778502073456]: 
+            i18n: true
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
@@ -315,6 +383,7 @@ title: Home
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text [ngx.components.UIText-1778502073462]: 
+            i18n: true
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
@@ -412,6 +481,7 @@ title: Home
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
           ↓Text1 [ngx.components.UIText-1778504419833]: 
+            i18n: true
             textValue: 
               - xmlizable: 
                 - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
@@ -423,6 +493,7 @@ title: Home
             beanData: '{"ionBean":"Label"}'
             tagName: ion-label
             ↓Text [ngx.components.UIText-1778504287514]: 
+              i18n: true
               textValue: 
                 - xmlizable: 
                   - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType

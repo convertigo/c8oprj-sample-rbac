@@ -1,4 +1,5 @@
 accessibility: Private
+comment: Attempt to delete user data by the currently logged-in user
 ↓Call_Sequence [steps.SequenceStep-1778494038302]: 
   sourceSequence: lib_FullSyncGrp.EffectivePermissionsOfUser
 ↓IfExist1 [steps.IfExistStep-1778494100218]: 

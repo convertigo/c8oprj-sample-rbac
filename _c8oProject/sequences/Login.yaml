@@ -1,4 +1,5 @@
 accessibility: Private
+comment: Simulate a user connection
 ↓inputVars [steps.InputVariablesStep-1778162303387]: 
 ↓authenticatedUserID [steps.SetAuthenticatedUserStep-1778162303390]: 
   output: true

@@ -1,4 +1,5 @@
 accessibility: Private
+comment: Retrieve the permissions of the currently logged-in user
 ↓Call_Sequence [steps.SequenceStep-1778162680933]: 
   sourceSequence: lib_FullSyncGrp.EffectivePermissionsOfUser
 ↓IfExist [steps.IfExistThenElseStep-1778165730165]: 

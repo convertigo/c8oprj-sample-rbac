@@ -11,6 +11,7 @@
         beanData: '{"ionBean":"TextItem"}'
         tagName: ion-text
         ↓Text [ngx.components.UIText-1778486717430]: 
+          i18n: true
           textValue: 
             - xmlizable: 
               - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType

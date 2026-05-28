@@ -193,7 +193,10 @@ tplProjectName: mobilebuilder_tpl_8_4_0_ngx
           ion-item.selected {
             --color: var(--ion-color-primary);
           }
-          '
+          
+          tr {
+          	white-space: nowrap;
+          }'
 ↓AppEvent [ngx.components.UIAppEvent-1777967688486]: 
   appEvent: onAppInit
   comment: Initializes global app state when the application starts
