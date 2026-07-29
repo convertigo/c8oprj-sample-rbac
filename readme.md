@@ -11,7 +11,9 @@ For more technical informations : [documentation](./project.md)
 - [Installation](#installation)
 - [Mobile Application](#mobile-application)
     - [Pages](#pages)
+        - [DeleteAllData](#deletealldata)
         - [Page](#page)
+        - [ReadAllData](#readalldata)
     - [Shared Actions](#shared-actions)
         - [GetPermissions](#getpermissions)
     - [Shared Components](#shared-components)
@@ -31,13 +33,13 @@ For more technical informations : [documentation](./project.md)
      <tr><td>To contribute</td><td>
 
      ```
-     sampleRBAC=https://github.com/convertigo/c8oprj-sample-rbac.git:branch=8.4.0.0
+     sampleRBAC=git@github.com:convertigo/c8oprj-sample-rbac.git:branch=8.4.0.0
      ```
      </td></tr>
      <tr><td>To simply use</td><td>
 
      ```
-     sampleRBAC=https://github.com/convertigo/c8oprj-sample-rbac/archive/8.4.0.0.zip
+     sampleRBAC=git@github.com:convertigo/c8oprj-sample-rbac/archive/8.4.0.0.zip
      ```
      </td></tr>
     </table>
@@ -50,9 +52,17 @@ Describes the mobile application global properties
 
 ### Pages
 
+#### DeleteAllData
+
+Demonstrates page access granted by the samplerbac.data.delete:all permission
+
 #### Page
 
 Default home page
+
+#### ReadAllData
+
+Demonstrates page access granted by the samplerbac.data.read:all permission
 
 ### Shared Actions
 

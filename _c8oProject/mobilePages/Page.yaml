@@ -295,6 +295,22 @@ title: Home
                              "Property": "plain:result",
                              "Value": "source:{\"filter\":\"Action\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1778487883222,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162014026,\"rootEvent\":true,\"pageLocals\":false},{\"priority\":1778166517378,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162467282,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778162735525,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778168005578,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778487883216,\"rootEvent\":false,\"pageLocals\":false},{\"priority\":1778487883219,\"rootEvent\":false,\"pageLocals\":false}],\"path\":\"?.out\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
                             }'
+                          ↓SetUserProfile [ngx.components.UIDynamicAction-1785255501301]: 
+                            beanData: |
+                              '{
+                               "ionBean": "SetGlobalAction",
+                               "Property": "plain:userProfile",
+                               "Value": "script:{name: this.global.user, permissions: this.local.userPermissions}"
+                              }'
+                            comment: Makes the authenticated user's permissions available to the page guard
+                            ↓SetAuthenticated [ngx.components.UIDynamicAction-1785255501401]: 
+                              beanData: |
+                                '{
+                                 "ionBean": "SetGlobalAction",
+                                 "Property": "plain:authenticated",
+                                 "Value": "script:true"
+                                }'
+                              comment: Marks the authenticated session as available to the page guard
   ↓Directive [ngx.components.UIControlDirective-1778172100526]: 
     directiveName: If
     directiveSource: 

@@ -62,6 +62,8 @@ tplProjectName: mobilebuilder_tpl_8_4_0_ngx
 ↓GetPermissions [ngx.components.UIActionStack-1778487704301]: 🗏 mobileSharedActions/GetPermissions.yaml
 ↓CardItem [ngx.components.UISharedRegularComponent-1778486717414]: 🗏 mobileSharedComponents/CardItem.yaml
 ↓Page [ngx.components.PageComponent-1777967688484]: 🗏 mobilePages/Page.yaml
+↓ReadAllData [ngx.components.PageComponent-1785255501101]: 🗏 mobilePages/ReadAllData.yaml
+↓DeleteAllData [ngx.components.PageComponent-1785255501201]: 🗏 mobilePages/DeleteAllData.yaml
 ↓Style [ngx.components.UIStyle-1777967688485]: 
   comment: You can add some global application styles here
   styleContent: 
@@ -220,8 +222,17 @@ tplProjectName: mobilebuilder_tpl_8_4_0_ngx
 ↓AppGuard [ngx.components.UIAppGuard-1777967688489]: 
   comment: Central guard used to validate page navigation
   ↓AuthorizePages [ngx.components.UIDynamicAction-1777967688490]: 
-    beanData: '{"ionBean":"AuthorizePagesAction"}'
-    comment: Applies page authorization rules before route access
+    beanData: |
+      '{
+       "ionBean": "AuthorizePagesAction",
+       "protectedPages": "script:[''read-all-data'', ''delete-all-data'']",
+       "pagePermissionRules": "script:[{page: ''read-all-data'', permissions: [''samplerbac.data.read:all'']}, {page: ''delete-all-data'', permissions: [''samplerbac.data.delete:all'']}]",
+       "globalUserProfileProperty": "source:{\"filter\":\"Global\",\"project\":\"sampleRBAC\",\"input\":\"\",\"model\":{\"data\":[{\"sharedObject\":\"router.sharedObject\"}],\"path\":\"?.userProfile\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}",
+       "redirectUnauthenticatedTo": "plain:home",
+       "redirectPermissionDeniedTo": "plain:home",
+       "permissionDeniedMessage": "plain:Acces refuse : permission insuffisante."
+      }'
+    comment: Applies permission-based authorization rules before route access
 ↓LightTheme [ngx.components.UIStyle-1777967688491]: 
   comment: This will define the light theme for the application. This will be selected if the device is in light mode.
   styleContent: 
